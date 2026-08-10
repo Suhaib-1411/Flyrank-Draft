@@ -3,44 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[ S \ A ] | Portfolio</title>
+    <title>[ S \ A ] | Cybersecurity Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
         body {
             background-color: #111827;
             color: #f3f4f6;
             font-family: 'Space Grotesk', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
-        .status-box {
-            text-align: left;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
             border-left: 4px solid #0F52BA;
             padding-left: 24px;
+            margin-bottom: 60px;
         }
-        h1 {
-            color: #00E5FF;
-            margin-bottom: 8px;
-            font-size: 2.5rem;
+        h1 { color: #00E5FF; font-size: 2.5rem; margin-bottom: 8px; }
+        h2 { color: #00E5FF; border-bottom: 1px solid #374151; padding-bottom: 10px; margin-top: 40px; }
+        .claim { font-size: 1.2rem; color: #9ca3af; }
+        .case-study {
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 2px solid #00E5FF;
         }
-        p { margin: 4px 0; }
-        .system-text {
-            color: #9ca3af;
+        code {
+            background: #111827;
+            padding: 2px 6px;
+            border-radius: 4px;
             font-family: monospace;
-            font-size: 0.9rem;
-            margin-top: 16px;
+            color: #00E5FF;
         }
+        pre {
+            background: #111827;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #a5b4fc;
+            border: 1px solid #374151;
+        }
+        a { color: #00E5FF; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .footer-cta { text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid #374151; }
     </style>
 </head>
 <body>
-    <div class="status-box">
-        <h1>[ S \ A ]</h1>
-        <p><strong>System Status:</strong> Infrastructure Live.</p>
-        <p>Cybersecurity Portfolio</p>
-        <p class="system-text">> Awaiting content deployment...</p>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <header>
+            <h1>[ S \ A ]</h1>
+            <p class="claim">I engineer clean, secure Python backend tools that turn raw system data into actionable intelligence.</p>
+        </header>
+
+        <!-- PRIMARY CASE STUDY -->
+        <section>
+            <h2>01 / Python Security Log Parser</h2>
+            <div class="case-study">
+                <h3>The Problem</h3>
+                <p>System logs are noisy and difficult to triage manually during an active incident. I needed a way to extract critical authentication failures without relying on heavy enterprise tools.</p>
+                <h3>The Build</h3>
+                <p>I built a lightweight Python script that parses standard log files using custom regular expressions to flag anomalies and format them into actionable reports.</p>
+                <pre><code>import re
+
+def parse_security_logs(filepath):
+    # Core parsing logic ready for deployment
+    pass</code></pre>
+            </div>
+        </section>
+
+        <!-- SECONDARY CASE STUDY -->
+        <section>
+            <h2>02 / Remote Security Internship</h2>
+            <div class="case-study">
+                <h3>The Role</h3>
+                <p>Tasked with transitioning from academic theory to applied network security.</p>
+                <h3>The Build</h3>
+                <p>Developed a basic network sniffer and built regex-based log analyzers to identify anomalous traffic patterns, directly applying network fundamentals to real-world data streams.</p>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section>
+            <h2>03 / Identity & Status</h2>
+            <div class="case-study">
+                <p>Currently studying Cybersecurity at COMSATS University Islamabad (4th semester). My focus is on defensive backend architecture and system integrity. I build primarily in Python.</p>
+            </div>
+        </section>
+
+        <!-- FOOTER CTA -->
+        <footer class="footer-cta">
+            <p><strong><a href="#">Review my Python repositories on GitHub ➔</a></strong></p>
+        </footer>
     </div>
 </body>
 </html>
