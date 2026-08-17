@@ -49,6 +49,13 @@
             color: #a5b4fc;
             border: 1px solid #374151;
         }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
         a { color: #00E5FF; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .footer-cta { text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid #374151; }
@@ -78,9 +85,26 @@ def parse_security_logs(filepath):
             </div>
         </section>
 
+        <!-- CAPSTONE AGENT CASE STUDY -->
+        <section>
+            <h2>02 / Threat Intelligence Scout (AI Agent)</h2>
+            <div class="case-study">
+                <h3>The Problem</h3>
+                <p>Tracking new vulnerabilities across public databases is manual and time-consuming. I needed an automated way to query CVE endpoints and extract structured threat intelligence without manual web navigation.</p>
+                <h3>The Build</h3>
+                <p>I engineered an autonomous Python agent that connects directly to the live MITRE CVE API. It retrieves raw JSON vulnerability definitions, parses technical flaw mechanisms, and formats clean Markdown intelligence briefs locally.</p>
+                <pre><code>import requests
+
+def fetch_cve_data(cve_id):
+    url = f"https://cveawg.mitre.org/api/cve/{cve_id}"
+    response = requests.get(url, timeout=10)
+    return response.json() if response.status_code == 200 else None</code></pre>
+            </div>
+        </section>
+
         <!-- SECONDARY CASE STUDY -->
         <section>
-            <h2>02 / Remote Security Internship</h2>
+            <h2>03 / Remote Security Internship</h2>
             <div class="case-study">
                 <h3>The Role</h3>
                 <p>Tasked with transitioning from academic theory to applied network security.</p>
@@ -91,27 +115,29 @@ def parse_security_logs(filepath):
 
         <!-- ABOUT SECTION -->
         <section>
-            <h2>03 / Identity & Status</h2>
+            <h2>04 / Identity & Status</h2>
             <div class="case-study">
                 <p>Currently studying Cybersecurity at COMSATS University Islamabad (4th semester). My focus is on defensive backend architecture and system integrity. I build primarily in Python.</p>
             </div>
         </section>
-<!-- LINKS & BOOKING -->
+
+        <!-- LINKS & BOOKING -->
         <section>
-            <h2>04 / Directory & Booking</h2>
+            <h2>05 / Directory & Booking</h2>
             <div class="case-study">
                 <p>Connect with me, review my infrastructure, or schedule a sync:</p>
                 <ul>
                     <li><strong>Network:</strong> <a href="https://www.linkedin.com/in/suhaib-akram-731499251?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn Profile</a></li>
                     <li><strong>Code:</strong> <a href="https://github.com/Suhaib-1411" target="_blank">GitHub Repositories</a></li>
-                    <li><strong>Paperwork:</strong> <a href="#" target="_blank">Download CV (PDF)</a></li>
+                    <li><strong>Experience / CV:</strong> <a href="https://www.linkedin.com/in/suhaib-akram-731499251?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">View Full Experience on LinkedIn</a></li>
                     <li><strong>Scheduling:</strong> <a href="https://calendly.com/suhaibakram606/30min" target="_blank">Book a Meeting (Calendly)</a></li>
                 </ul>
             </div>
         </section>
+
         <!-- FOOTER CTA -->
         <footer class="footer-cta">
-            <p><strong><a href="#">Review my Python repositories on GitHub ➔</a></strong></p>
+            <p><strong><a href="https://github.com/Suhaib-1411" target="_blank">Review my Python repositories on GitHub ➔</a></strong></p>
         </footer>
     </div>
 </body>
