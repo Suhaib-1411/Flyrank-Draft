@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[ S \ A ] Infrastructure & Security Intelligence</title>
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="[ S \ A ] | Security Infrastructure & Intelligence">
+    <meta property="og:description" content="Cybersecurity portfolio featuring autonomous Python agents, network sniffers, and threat intelligence workflows.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#00E5FF">
 
     <style>
         :root {
@@ -259,7 +263,6 @@
 
     <div class="grid-background"></div>
 
-    <!-- Dynamic Navigation -->
     <nav id="navbar">
         <a href="#" class="nav-brand">[ S \ A ]</a>
         <ul class="nav-links">
@@ -271,7 +274,6 @@
     </nav>
 
     <div class="container">
-        <!-- Hero -->
         <section class="hero">
             <div class="status-badge">
                 <span class="pulse-dot"></span>
@@ -289,7 +291,7 @@
 
         <div class="metrics-grid">
             <div class="metric-card">
-                <div class="metric-num">03</div>
+                <div class="metric-num">04</div>
                 <div class="metric-label">Python Systems Shipped</div>
             </div>
             <div class="metric-card">
@@ -302,7 +304,6 @@
             </div>
         </div>
 
-        <!-- LIVE AGENT -->
         <section id="agent" style="margin-bottom: 6rem;">
             <div class="section-header">
                 <span>Production Environment</span>
@@ -332,7 +333,6 @@
             </div>
         </section>
 
-        <!-- Engineering Case Studies -->
         <section id="projects" style="margin-bottom: 6rem;">
             <div class="section-header">
                 <span>Technical Implementation</span>
@@ -345,7 +345,10 @@
                     <h3>Python Security Log Parser</h3>
                     <p>High-volume authentication log triaging tool that eliminates manual log review during incident response. Uses custom regular expressions to extract critical failure vectors and serialize findings.</p>
                     <div class="code-container">
-                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <div style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; z-index: 10;">
+                            <a href="https://github.com/Suhaib-1411/Python-Projects" target="_blank" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-subtle); color: var(--text-secondary); padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; text-decoration: none; transition: all 0.2s;">View on GitHub</a>
+                            <button class="copy-btn" onclick="copyCode(this)" style="position: static;">Copy</button>
+                        </div>
                         <pre class="code-block"><code>import re
 import json
 
@@ -361,7 +364,10 @@ def parse_security_logs(filepath):
                     <h3>Network Packet Sniffer & Traffic Analyzer</h3>
                     <p>Applied network utility engineered during my internship. Built to inspect packet headers, identify unexpected protocol anomalies, and monitor TCP/UDP connection handshakes in real time.</p>
                     <div class="code-container">
-                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <div style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; z-index: 10;">
+                            <a href="https://github.com/Suhaib-1411/Python-Projects" target="_blank" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-subtle); color: var(--text-secondary); padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; text-decoration: none; transition: all 0.2s;">View on GitHub</a>
+                            <button class="copy-btn" onclick="copyCode(this)" style="position: static;">Copy</button>
+                        </div>
                         <pre class="code-block"><code>import socket
 import struct
 
@@ -373,10 +379,35 @@ def init_raw_listener(interface):
                     </div>
                 </div>
 
+                <div class="case-card">
+                    <div class="case-tag">03 / DATA EXTRACTION PIPELINE</div>
+                    <h3>Dynamic Intelligence Web Scraper</h3>
+                    <p>An automated intelligence gathering script that parses live GitHub trends, topic repositories, and developer news without requiring API authentication. Engineered with <code>BeautifulSoup4</code> to navigate complex DOM structures and extract nested datasets, routing the output directly into structured JSON and CSV formats for downstream processing.</p>
+                    <div class="code-container">
+                        <div style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; z-index: 10;">
+                            <a href="https://github.com/Suhaib-1411/Python-Projects" target="_blank" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-subtle); color: var(--text-secondary); padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; text-decoration: none; transition: all 0.2s;">View on GitHub</a>
+                            <button class="copy-btn" onclick="copyCode(this)" style="position: static;">Copy</button>
+                        </div>
+                        <pre class="code-block"><code>import requests
+from bs4 import BeautifulSoup
+from datetime import datetime
+
+def scrape_trending_news(url):
+    # Bypass simple scraping protections via User-Agent spoofing
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    response = requests.get(url, headers=headers, timeout=12)
+    
+    # Parse DOM securely and extract intelligence elements
+    soup = BeautifulSoup(response.text, "html.parser")
+    repos = soup.select("article.Box-row")
+    
+    # Extract, serialize, and route to local filesystem...</code></pre>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- Identity -->
         <section id="about" style="margin-bottom: 6rem;">
             <div class="section-header">
                 <span>Identity & Context</span>
@@ -392,7 +423,6 @@ def init_raw_listener(interface):
             </div>
         </section>
 
-        <!-- Connect -->
         <section id="connect">
             <div class="section-header">
                 <span>Access & Routing</span>
@@ -435,14 +465,12 @@ def init_raw_listener(interface):
             </div>
         </section>
 
-        <!-- Footer -->
         <footer>
             <div>&copy; 2026 [ S \ A ] Infrastructure. All Endpoints Verified.</div>
             <div><a href="https://github.com/Suhaib-1411/Python-Projects" target="_blank">Access Python Projects ↗</a></div>
         </footer>
     </div>
 
-    <!-- Interactive Scripts -->
     <script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
@@ -453,7 +481,7 @@ def init_raw_listener(interface):
 
         // Copy Code Button functionality
         function copyCode(btn) {
-            const pre = btn.nextElementSibling;
+            const pre = btn.parentElement.nextElementSibling;
             const code = pre.innerText;
             navigator.clipboard.writeText(code).then(() => {
                 btn.innerText = "Copied!";
@@ -461,7 +489,7 @@ def init_raw_listener(interface):
                 btn.style.color = "#000";
                 setTimeout(() => {
                     btn.innerText = "Copy";
-                    btn.style.background = "rgba(255,255,255,0.1)";
+                    btn.style.background = "transparent";
                     btn.style.color = "var(--text-secondary)";
                 }, 2000);
             });
