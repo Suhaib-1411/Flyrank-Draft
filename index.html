@@ -12,6 +12,18 @@
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#00E5FF">
 
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <!-- Google Analytics (Free Tier Integration) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SECURITYPORTFOLIO"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SECURITYPORTFOLIO');
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +38,7 @@
             --border-highlight: #00E5FF;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
-            --text-muted: #94a3b8; /* Updated for better contrast */
+            --text-muted: #94a3b8; 
             --accent-cyan: #00E5FF;
             --accent-blue: #2563eb;
             --accent-emerald: #10b981;
@@ -477,8 +489,16 @@ def scrape_trending_news(url):
             </div>
         </section>
 
+        <!-- Footer with Graduate Badge -->
         <footer>
-            <div>&copy; 2026 [ S \ A ] Infrastructure. All Endpoints Verified.</div>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div>&copy; 2026 [ S \ A ] Infrastructure. All Endpoints Verified.</div>
+                
+                <!-- FlyRank Badge -->
+                <a href="#" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 6px 12px; border-radius: 4px; color: var(--accent-emerald); font-family: var(--font-mono); font-size: 0.8rem; text-decoration: none; width: fit-content; transition: all 0.2s;">
+                    <span style="font-size: 1rem;">🎓</span> FlyRank Verified Graduate
+                </a>
+            </div>
             <div><a href="https://github.com/Suhaib-1411/Python-Projects" target="_blank">Access Python Projects ↗</a></div>
         </footer>
     </div>
