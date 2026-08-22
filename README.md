@@ -38,12 +38,12 @@ Run the script from your terminal, passing the target CVE as the primary argumen
 * IMPACT SCOPE:        Backend Service & Data Pipeline Integrity
 =======================================================
 ```
-##Evaluation Results (v2)
+## Evaluation Results (v2)
 During v2 stress testing, the agent was evaluated for edge cases (e.g., API timeouts, invalid CVE formats, and garbage data). The system successfully handled 100% of failed API calls by gracefully failing over to a synthetic "cached" response block, ensuring the script does not crash during execution.
 
-##Known Limitations
+## Known Limitations
 1. API Dependency: The agent relies entirely on the uptime and rate limits of the public MITRE CVE API. If the endpoint is down, live extraction halts.
 2. Input Validation: Currently, the script does not perform local Regex validation on the CVE string format (e.g., enforcing CVE-YYYY-NNNN) before dispatching the HTTP request.
 
-##AI Transparency & Framework Diligence
+## AI Transparency & Framework Diligence
 I engineered the core backend architecture, logic flow, and Python API routing. I collaborated with AI (Claude/Gemini) as a pair-programmer to optimize the JSON parsing schema, rapidly generate the CSS aesthetic for the web-deployed version of this terminal, and structure this documentation.
