@@ -37,6 +37,7 @@ Run the script from your terminal, passing the target CVE as the primary argumen
 * MECHANISM:           [Extracted vulnerability description...]
 * IMPACT SCOPE:        Backend Service & Data Pipeline Integrity
 =======================================================
+```
 ## Evaluation Results (v2)
 During v2 stress testing, the agent was evaluated for edge cases (e.g., API timeouts, invalid CVE formats, and garbage data). The system successfully handled 100% of failed API calls by gracefully failing over to a synthetic "cached" response block, ensuring the script does not crash during execution.
 
